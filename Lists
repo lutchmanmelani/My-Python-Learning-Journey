@@ -1,0 +1,142 @@
+#Lists
+bicycles = ['trek', 'cannondale', 'redline', 'specialized']
+print(bicycles)
+
+#Accessing elements in a list
+print(bicycles[0])
+print(bicycles[1])
+print(bicycles[2])
+print(bicycles[0].title())
+
+#Index positions start at 0, not 1
+print(bicycles[1])  
+print(bicycles[3])
+print(bicycles[-1])    #Returns last item on list
+
+#Using individual values froma list
+message = "My first bicycle was a" + bicycles[0].title() + "."
+print(message)
+
+#Modifing elements in a list
+motorcycles = ['honda', 'yamaha', 'suzuki']
+print(motorcycles)
+motorcycles[0] = 'ducati'  #adds ducati to [0]
+print(motorcycles)
+
+#Appending elements to end of list
+motorcycles.append('newcycle')
+print(motorcycles)
+
+#Use append() to  insert in empty list
+motorcycles = []
+motorcycles.append('honda')
+motorcycles.append('yamaha')
+motorcycles.append('suzuki')
+print(motorcycles)
+
+#Removing elements from a list
+motorcycles = ['honda', 'yamaha', 'suzuki']
+print(motorcycles)
+
+del motorcycles[0]
+print(motorcycles)
+del motorcycles[1]
+print(motorcycles)
+
+#Removing using pop() method
+motorcycles = ['honda', 'yamaha', 'suzuki']
+print(motorcycles)
+popped_motorcycle = motorcycles.pop()
+print(motorcycles)
+print(popped_motorcycle)
+
+motorcycles = ['honda', 'yamaha', 'suzuki']
+last_owned = motorcycles.pop()
+print("The last motorcycle I owned was a" + last_owned.title() + ".")
+
+#Popping items from any position in a list
+motorcycle = ['honda', 'yamaha', 'suzuki']
+first_owned = motorcycles.pop(0)
+print('The first motorcycle I owned was a' + first_owned.title() + '.')
+
+#Removing an item by value
+motorcycles = ['honda', 'yamaha', 'suzuki', 'ducati']
+print(motorcycles)
+motorcycles.remove('ducati')
+print('motorcycles')
+
+motorcycles = ['honda', 'yamaha', 'suzuki', 'ducati']
+too_expensive = 'ducati'
+motorcycles.remove(too_expensive)
+print(motorcycles)
+print("\n A " + too_expensive.title() + "is too expensive for me.")
+
+#Sorting a list permanently with sort() method
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+cars.sort()
+print(cars)
+
+#Sort in alphabetical reverse order
+cars = ['bmw', 'audi', 'toyota', 'sabaru']
+cars.sort(reverse=True)
+print(cars)
+
+#Sorting Temporarily with sorted function
+print("Here is the sorted list:")
+print(sorted(cars))
+
+#Printing list in reverse order (not alphabetical)
+cars.reverse()
+print(cars)
+
+#finding the length of a list
+len(cars)
+
+#Looping through an entire list
+magicians = ['alice', 'david', 'caroline']
+for magician in magicians:
+    print(magician)
+
+#Doing more work within a for loop
+magicians = ['alice', 'david', 'caroline']
+for magician in magicians:
+    print(magician.title() + ", that was a great trick!")
+    print("I can't wait to see your next trick," + magician.title() + ". \n")
+
+print("Thank you, everyone. That was a great show")
+
+#Numeral List using range() function
+for value in range(1,5):
+    print(value)
+
+#Use range() to make list of numbers
+numbers = list(range(1,6))
+print(numbers)
+
+#Print even numbers
+even_numbers = list(range(2, 11, 2))
+print(even_numbers)
+
+#First 10 square numbers into a list
+squares  = []
+for value in range(1, 11):
+    square = value ** 2
+    squares.append(square)
+print(square)
+
+squares = []
+for value in range(1, 11):
+    squares.append(value**2)
+    print(squares)
+
+#Simple statistics with a list of numbers
+digits = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+min(digits)    #prints the lowest digit
+max(digits)    #prints the highest digit
+sum(digits)    #sums digits
+
+#List comprehension
+squares = [value ** 2 for value in range(1, 11)]
+print(squares)
+
+
