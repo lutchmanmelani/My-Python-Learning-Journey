@@ -1,1 +1,158 @@
+cars = ['audi', 'bmw', 'subaru', 'toyota']
+for car in cars:
+    if car == 'bmw':
+        print(car.upper())
+    else:
+        print(car.title())
 
+#Checking for equality
+#car = 'bmw'
+#car == 'bmw'
+#should give you a true on python console
+#car = 'audi'
+#car == 'bmw'
+#Output will be generated as False
+
+#Case Sensitivity
+#car = 'Audi'
+#car == 'audi'   # output will be False
+
+#Checking for inequality
+requested_topping = 'mushroom'
+if requested_topping != 'anchovies':
+    print("Hold the Anchovies")
+
+#Numerical Comparisons
+answer = 17
+if answer != 42:
+    print("That is not the coreect answer, please re-try")
+
+#Checking multiple conditions with and
+#  >>> age_0 = 22
+#  >>> age_1 = 18
+#  >>> age_0 >= 21 and age_1 >= 21
+#  False
+
+#  >>> age_1 = 22
+#  >>> age_0 >= 21 and age_1 >= 21
+#  true
+
+#Checking Multiple conditions with or
+#  >>> age_0 = 22
+#  >>> age_1 = 18
+#  >>> age_0 >= 21 or age_1 >= 21
+#  True
+
+#Checking whether a value is not in a list
+#  >>> requested_toppings = ['mushrooms', 'onions', 'pineapple']
+#  >>> 'mushrooms' in requested_toppings
+#  True
+#  >>> 'pepperoni' in requested_toppings
+#  False
+
+#Checking whether a value is not in a list
+banned_users = ['andrew', 'caroline', 'david']
+user = 'Marie'
+if user not in banned_users:
+    print(user.title() + ", you can post a response if you wish")
+
+#Simple if statement
+age = 19
+if age >= 18:
+    print("You are old enough to vote")
+    print("Have you registered to vote yet")
+
+#If else statement
+age = 17
+if age >= 18:
+    print("You are old enough to vote")
+    print("Have you registered to vote yet")
+else:
+    print("Sorry, you are too young to vote")
+    print("Please register to vote as soon as you turn 18")
+
+#The if, elif, else chain
+age = 12
+if age < 4:
+    print("Your addmission cost is R0")
+elif age < 18:
+    print("You addmission cost is R5")
+else:
+    print("Your addmission cost is R10")
+
+age = 12
+if age < 4:
+    price = 0
+elif age < 18:
+    price = 5
+else:
+    price = 10
+print("Your addmission cost is" + str(price) + ".")
+
+#Using multiple elif blocks
+age = 12
+if age < 4:
+    price = 0
+elif age < 18:
+    price = 5
+elif age < 65:
+    price = 10
+else:
+    price = 5
+print("Your addmission cost is" + str(price) + ".")
+
+#Ommitting the else block
+age = 12
+if age < 4:
+    price = 0
+elif age < 18:
+    price = 5
+elif age < 65:
+    price = 10
+elif age > 65:
+    price = 5
+print("Your addmission cost is" + str(price) + ".")
+
+#Testing Multiple Conditions
+requested_toppings = ['mushrooms', 'extra cheese']
+if 'mushrooms' in requested_toppings:
+    print("Adding Mushrooms")
+if 'pepperoni' in requested_toppings:
+    print("Adding Pepperoni")
+if 'extra cheese' in requested_toppings:
+    print("Adding Extra Cheese")
+print("\nFinish making your pizza")
+
+#Using if statements with lists
+#Checking for special items
+requested_toppings = ['mushrooms', 'green peppers', 'extra cheese']
+for requested_topping in requested_toppings:
+    print("Adding" + requested_topping +'.')
+print("\nFinish making your pizza")
+
+
+requested_toppings = ['mushrooms', 'green peppers', 'extra cheese']
+for requested_topping in requested_toppings:
+    if requested_topping == 'green peppers':
+        print("sorry, we are out of green peppers")
+    else:
+        print("Would you prefer, " + requested_topping + ".")
+
+#Checking that a list is not empty
+requested_toppings = []
+if requested_toppings:
+    for requested_topping in requested_toppings:
+        print("Adding " + requested_topping)
+    print("\nFinish making your pizza")
+else:
+    print("Are you sure you want a plain pizza")
+
+#Using multiple lists
+available_toppings = ['mushrooms', 'olives', 'green peppers', 'pepperoni', 'pineapple', 'extra cheese']
+requested_toppings = ['mushrooms', 'french fries', 'extra cheese']
+for requested_topping in requested_toppings:
+    if requested_topping in available_toppings:
+        print("Adding " + requested_topping)
+    else:
+        print("Sorry, we dont have " + requested_topping)
+print("\nFinish making your pizza")
