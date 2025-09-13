@@ -173,4 +173,10 @@ print(my_foods)
 print("My friends favourite foods are:")
 print(friend_foods)
 
+#Updating both lists wothout a slice
+friend_foods = my_foods
+my_foods.append('cannoli')
+friend_foods.append('ice cream')
+print(my_foods)
+
 
