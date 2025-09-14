@@ -1,2 +1,2 @@
-# My-Python-Learning-Journey
+# My-Python-Journey
 Learning Python
