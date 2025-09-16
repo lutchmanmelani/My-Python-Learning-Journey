@@ -146,3 +146,56 @@ for alien in aliens [0:5]:
     print(alien)
     print("...")
 
+for alien in aliens[0:3]:
+    if alien['color'] == 'green':
+        alien['color'] = 'yellow'
+        alien['speed'] ='medium'
+        alien['points'] = 10
+    elif alien['color'] == 'yelow':
+        alien['color'] = 'red'
+        alien['speed'] = 'fast'
+        alien['points'] = 15
+
+#A list in a dictionary
+#Store information about a pizza being ordered
+
+pizza = {
+    'crust' : 'thick',
+    'toppings' : ['mushrooms', 'extra cheese'],
+    }
+#Summarise the order
+print("You ordered a " + pizza['crust'] + " - crust pizza" + " with the following toppings:")
+for topping in pizza['toppings']:
+    print("\t" + topping)
+
+favourite_languages = {
+    'jen' : ['python', 'ruby'],
+    'sarah' : ['c'],
+    'edward' : ['ruby', 'go'],
+    'phil' : ['python', 'haskell'],
+}
+for name, languages in favourite_languages.items():
+    print("\n" + name.title() +  " 's favourite_languages are:" )
+    for language in languages:
+        print("\t" + language.title())
+
+#A dictionary in a dictionary
+users = {
+    'a einstein' : {
+        'first' : 'albert',
+        'last' : 'einstein',
+        'location' : 'princeton',
+    },
+    'm curie' : {
+        'first' : 'marie',
+        'last' : 'curie',
+        'location' : 'paris',
+    },
+}
+for username, user_info in users.items():
+    print("\n Username: " + username)
+    full_name = user_info['first'] + " " + user_info['last']
+    location = user_info['location']
+    print("\t Fullname: " + full_name.title())
+    print("\t Location: " + location.title())
+
