@@ -1,1 +1,131 @@
+#How the input function works
+message = input("Tell me something and I will report it back to you")
+print("message")
 
+#Writing clear prompts
+name = input("Please enter your name")
+print("Hello, " + name + "!")
+
+prompt = "If you tell us who you are, we can personalise the message you see"
+prompt += "\nWhat is your first name?"
+name = input(prompt)
+print("\nHello " + name + "!")
+
+#Using int() to accept numerical input
+height = input("How tall are you, in inches")
+height = int(height)
+if height >= 36:
+    print("\nYou are tall enough to ride")
+else:
+    print("You will be able to ride, when you are a bit older")
+
+#the modulo operator - Divides one number by another and returns the remainder
+number = input("Enter a number, and I will tell you if it's even or odd")
+number = int(number)
+if number %2 == 0:
+    print("\nThe number " + str(number) + "is even")
+else:
+    print("\nThe number is odd")
+
+
+#The while loop
+current_number = 1
+while current_number <= 5:
+    print(current_number)
+    current_number += 1
+
+#Letting the user choose when to quit
+prompt = "\nTell me something, and I will repeat it back to you:"
+prompt = "\nEnter 'quit' to end the program."
+message = ""
+while message != 'quit':
+    message = input(prompt)
+    if message != 'quit':
+        print(message)
+
+#Using a flag
+prompt = "\nTell me something, and I will repeat it back to you"
+prompt += "\nEnter 'quit' to end the program."
+active = True
+while active:
+    message = input(prompt)
+    if message == 'quit':
+        active = False
+    else:
+        print(message)
+
+#Using break to exit a loop
+prompt = "\nPlease enter a name of a city you visited"
+prompt += "\n(Enter 'quit' when you are finished.)"
+while True:
+    city = input(prompt)
+    if city == 'quit':
+        break
+    else:
+        print("I'd love to go to " + city.title() + "!")
+
+#Using continue in a loop
+current_number = 0
+while current_number < 10:
+    current_number += 1
+    if current_number %2 == 0:
+        continue
+    print(current_number)
+
+#Avoiding infinite loops
+x = 1
+while x <= 5:
+    print(x)
+    x +=1
+
+#This loop runs forever (To stop Ctrl -C)
+# x = 1
+# while x <= 5:
+#    print(x)
+
+#Using while loops with list & Dictionaries
+#Moving items from one list to another
+
+#Start with users that need to be verified
+#and an empty list to hold confirmed users
+unconfirmed_users = ['alice', 'brian', 'candace']
+confirmed_users = []
+
+#Verify each user until there are no more unconfirmed users
+#move each verified user into the list of confirmed users
+
+while unconfirmed_users:
+    current_user = unconfirmed_users.pop()
+    print("Verifying user: " + current_user.title())
+    confirmed_users.append(current_user)
+
+#Display all confirmed users
+print("\n The following users have been confirmed:")
+for confirmed_user in confirmed_users:
+    print(confirmed_user.title())
+
+#Removing all instances of specific values from list
+pets = ['dog', 'cat', 'dog', 'goldfish', 'cat', 'rabbit', 'cat']
+print(pets)
+while 'cat' in pets:
+    pets.remove ('cat')
+print(pets)
+
+#Filling a dictionary with user input
+responses = {}
+#Set a flag to indicate that polling is active
+polling_active = True
+while polling_active:
+    #Prompt for the persons name and response
+    name = input("\nWhat is your name")
+    response = input("Which mountain would you like to climb")
+#Store response in a dictionery
+    responses[name] = response
+    #Find out if anyone else is going to take the poll
+    repeat = input("Would you like to introduce a friend(yes/no)")
+    if repeat == 'no':
+        polling_active = False
+#Polling is complete, show the results
+print("\n----Poll Results----")
+for name, response in responses.items():
+    print(name + "would you like to climb " + response + ".")
